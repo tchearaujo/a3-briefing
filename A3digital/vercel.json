@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "src": "/experimentos/a3digital",
-      "dest": "/experimentos/a3digital/login.html"
-    }
-  ]
-}
