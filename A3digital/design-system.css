@@ -1,0 +1,317 @@
+/* ============================================================
+   DESIGN SYSTEM — C&A
+   Arquivo centralizado de tokens de design.
+   Todos os HTMLs do projeto importam este arquivo.
+   Versão: 1.0 | Baseado no C&A Design System
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ── RESET BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* ============================================================
+   1. TIPOGRAFIA
+   ============================================================ */
+:root {
+  --font-primary:   'Roboto', sans-serif;
+  --font-ui:        'Inter', sans-serif;
+
+  /* Tamanhos */
+  --text-display-xl:  3rem;       /* 48px */
+  --text-display-lg:  2rem;       /* 32px */
+  --text-display-md:  1.5rem;     /* 24px */
+  --text-display-sm:  1.25rem;    /* 20px */
+  --text-body-lg:     1rem;       /* 16px */
+  --text-body:        0.875rem;   /* 14px */
+  --text-sm:          0.75rem;    /* 12px */
+  --text-xs:          0.625rem;   /* 10px */
+
+  /* Pesos */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+
+  /* Line heights */
+  --lh-tight:   1.15;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.75;
+
+  /* Letter spacing */
+  --ls-tight:   -0.04rem;
+  --ls-snug:    -0.02rem;
+  --ls-normal:  0;
+  --ls-wide:    0.05em;
+  --ls-wider:   0.08em;
+  --ls-widest:  0.1em;
+}
+
+/* ============================================================
+   2. PALETA DE CORES
+   ============================================================ */
+:root {
+  /* ── Marca principal ── */
+  --color-cea:              #104170;   /* CEA Blue — azul institucional */
+  --color-cea-light:        #165b9d;
+  --color-cea-lighter:      #1c73c6;   /* botões interativos */
+  --color-cea-dark:         #0c3661;
+  --color-cea-darker:       #041d3e;
+  --color-electric-blue:    #4100F7;   /* acento elétrico principal */
+  --color-electric-smooth:  #6733F9;   /* gradientes / secundário */
+  --color-soft-blue:        #0bacd3;
+  --color-cea-pay:          #0066FF;
+  --color-cea-secondary:    #0176D3;
+
+  /* ── Texto ── */
+  --color-text:             #212b36;   /* corpo principal */
+  --color-text-deep:        #0D1116;
+  --color-text-soft:        #5f6872;
+  --color-text-muted:       #72787E;
+  --color-text-faint:       #a6adb5;
+  --color-text-disabled:    #B5B7B9;
+
+  /* ── Superfícies ── */
+  --color-white:            #FFFFFF;
+  --color-surface:          #FFFFFF;
+  --color-surface-soft:     #f9fafc;   /* snow lighter */
+  --color-surface-mid:      #eceff5;   /* snow light */
+  --color-surface-muted:    #f2f2f2;   /* concrete */
+  --color-border:           #e2e7f0;
+  --color-border-strong:    #bdbdbd;   /* silver */
+  --color-smoke:            #bbc7dc;
+  --color-smoke-light:      #d5dce9;
+  --color-smoke-lighter:    #eff2f7;
+
+  /* ── Semânticas ── */
+  --color-success:          #1eceac;   /* emerald */
+  --color-success-text:     #087621;
+  --color-success-dark:     #03b085;
+  --color-success-darker:   #12805C;
+  --color-warning:          #fed654;   /* yellow */
+  --color-warning-orange:   #ff5630;   /* orange */
+  --color-danger:           #c12137;
+  --color-danger-text:      #a00211;
+  --color-danger-highlight: #EA0B25;
+
+  /* ── Sistema de cinzas (sl-color-gray-*) ── */
+  --sl-gray-0:   #ffffff;
+  --sl-gray-1:   #f5f5f5;
+  --sl-gray-2:   #ebebeb;
+  --sl-gray-3:   #e0e0e0;
+  --sl-gray-4:   #d6d6d6;
+  --sl-gray-5:   #c2c2c2;
+  --sl-gray-6:   #adadad;
+  --sl-gray-7:   #999999;
+  --sl-gray-8:   #858585;
+  --sl-gray-9:   #707070;
+  --sl-gray-10:  #5c5c5c;
+  --sl-gray-11:  #3d3d3d;
+  --sl-gray-12:  #1f1f1f;
+  --sl-gray-13:  #000000;
+
+  /* ── Sistema de azuis (sl-color-blue-*) ── */
+  --sl-blue-1:   #f1f8fd;
+  --sl-blue-3:   #b8daf8;
+  --sl-blue-5:   #5baae8;
+  --sl-blue-7:   #1e7bc5;
+  --sl-blue-10:  #0366dd;   /* strong accent */
+  --sl-blue-12:  #024fa9;
+  --sl-blue-13:  #013672;
+
+  /* ── Transparências ── */
+  --color-overlay:          rgba(32, 30, 30, 0.32);
+  --color-ghost:            rgba(32, 30, 30, 0.05);
+  --color-black-20:         rgba(33, 43, 54, 0.20);
+}
+
+/* ============================================================
+   3. ESPAÇAMENTO (sl-space-*)
+   ============================================================ */
+:root {
+  --space-0:    0rem;
+  --space-05:   0.125rem;  /*  2px */
+  --space-1:    0.25rem;   /*  4px */
+  --space-2:    0.5rem;    /*  8px */
+  --space-3:    0.75rem;   /* 12px */
+  --space-4:    1rem;      /* 16px */
+  --space-5:    1.25rem;   /* 20px */
+  --space-6:    1.5rem;    /* 24px */
+  --space-7:    1.75rem;   /* 28px */
+  --space-8:    2rem;      /* 32px */
+  --space-10:   2.5rem;    /* 40px */
+  --space-12:   3rem;      /* 48px */
+  --space-16:   4rem;      /* 64px */
+  --space-20:   5rem;      /* 80px */
+  --space-24:   6rem;      /* 96px */
+  --space-gap:  1rem;      /* 16px — gap padrão */
+}
+
+/* ============================================================
+   4. BORDER RADIUS (sl-radius-*)
+   ============================================================ */
+:root {
+  --radius-0:    0rem;
+  --radius-1:    0.25rem;   /*  4px */
+  --radius-2:    0.5rem;    /*  8px — padrão de componentes */
+  --radius-3:    0.75rem;   /* 12px */
+  --radius-full: 9999rem;   /* pill */
+}
+
+/* ============================================================
+   5. SOMBRAS (sl-shadow-*)
+   ============================================================ */
+:root {
+  --shadow-1:    0rem 0.25rem 1rem 0rem rgba(0, 0, 0, 0.16);
+  --shadow-2:    0rem 1.5rem 3rem 0rem rgba(0, 0, 0, 0.16);
+
+  /* Focus rings */
+  --focus-ring-base:     0rem 0rem 0rem 0.0625rem var(--sl-gray-0),
+                         0rem 0rem 0rem 0.1875rem var(--sl-gray-5);
+  --focus-ring-accent:   0rem 0rem 0rem 0.0625rem var(--sl-gray-0),
+                         0rem 0rem 0rem 0.1875rem var(--sl-blue-10);
+  --focus-ring-critical: 0rem 0rem 0rem 0.0625rem var(--sl-gray-0),
+                         0rem 0rem 0rem 0.1875rem var(--color-danger);
+}
+
+/* ============================================================
+   6. EASING
+   ============================================================ */
+:root {
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   7. TOKENS COMPOSTOS — atalhos para uso nos componentes
+   ============================================================ */
+:root {
+  /* Sidebar (padrão: azul CEA escuro) */
+  --sidebar-bg:       var(--color-cea);
+  --sidebar-border:   rgba(255,255,255,0.08);
+  --sidebar-text:     rgba(255,255,255,0.85);
+  --sidebar-muted:    rgba(255,255,255,0.45);
+  --sidebar-faint:    rgba(255,255,255,0.25);
+  --sidebar-hover:    rgba(255,255,255,0.08);
+  --sidebar-active:   rgba(255,255,255,0.15);
+  --sidebar-accent:   var(--color-electric-blue);
+
+  /* Superfície da aplicação */
+  --app-bg:           var(--color-surface-soft);
+  --app-surface:      var(--color-white);
+  --app-border:       var(--color-border);
+  --app-border-sub:   var(--color-smoke-lighter);
+
+  /* Texto da aplicação */
+  --app-text:         var(--color-text);
+  --app-text-soft:    var(--color-text-soft);
+  --app-text-muted:   var(--color-text-muted);
+  --app-text-faint:   var(--color-text-faint);
+
+  /* Ação primária */
+  --action-bg:        var(--color-electric-blue);
+  --action-bg-hover:  var(--color-electric-smooth);
+  --action-text:      #ffffff;
+
+  /* Header */
+  --header-bg:        var(--color-white);
+  --header-border:    var(--color-border);
+  --header-height:    48px;
+}
+
+/* ============================================================
+   8. DARK MODE — tokens sobrescritos
+   ============================================================ */
+[data-theme="dark"] {
+  --app-bg:           #0f1117;
+  --app-surface:      #1a1d25;
+  --app-border:       #2a2d38;
+  --app-border-sub:   #222530;
+  --app-text:         #f0f0f4;
+  --app-text-soft:    #8a8fa8;
+  --app-text-muted:   #6b7080;
+  --app-text-faint:   #464c60;
+  --header-bg:        #1a1d25;
+  --header-border:    #2a2d38;
+  --color-surface:    #1a1d25;
+  --color-border:     #2a2d38;
+  --color-surface-soft: #111318;
+  --color-surface-muted: #222530;
+}
+
+/* ============================================================
+   9. UTILITÁRIOS GLOBAIS
+   ============================================================ */
+
+/* Spinner */
+.ds-spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ds-spin 0.65s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.ds-spinner--dark {
+  border-color: rgba(0,0,0,0.12);
+  border-top-color: var(--color-text);
+}
+@keyframes ds-spin { to { transform: rotate(360deg); } }
+
+/* Toast */
+.ds-toast {
+  position: fixed;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--sl-gray-12);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-1);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 999;
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+.ds-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Badge / Tag */
+.ds-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+.ds-badge--active   { background: rgba(30,206,172,.12); color: #087621; border: 1px solid rgba(30,206,172,.3); }
+.ds-badge--pending  { background: rgba(254,214,84,.12); color: #7a5800; border: 1px solid rgba(254,214,84,.3); }
+.ds-badge--inactive { background: rgba(193,33,55,.08);  color: var(--color-danger-text); border: 1px solid rgba(193,33,55,.2); }
+
+/* Overlay escuro */
+.ds-overlay {
+  position: fixed; inset: 0;
+  background: var(--color-overlay);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+/* Focus visible global */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-accent);
+}
