@@ -3,6 +3,10 @@
     {
       "src": "/experimentos/A3digital",
       "dest": "/experimentos/A3digital/login.html"
+    },
+    {
+      "src": "/experimentos/a3digital",
+      "dest": "/experimentos/A3digital/login.html"
     }
   ]
 }
