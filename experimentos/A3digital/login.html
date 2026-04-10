@@ -352,7 +352,7 @@
     clearMsg('msg-recovery');
     if(!email){showMsg('msg-recovery','Digite seu e-mail para continuar.');return;}
     setLoading(btn,true);
-    const{error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:window.location.origin+'/login.html'});
+    const{error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:window.location.origin+'/experimentos/A3digital/login.html'});
     setLoading(btn,false);
     if(error)showMsg('msg-recovery','Erro ao enviar o e-mail. Verifique o endereço e tente novamente.');
     else{showMsg('msg-recovery','Link enviado! Verifique sua caixa de entrada.','success');document.getElementById('btn-send-recovery').disabled=true;}
