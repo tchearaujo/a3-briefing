@@ -605,7 +605,13 @@
     tbody.innerHTML = '<tr class="loading-row"><td colspan="6"><span class="spinner dark"></span> Carregando…</td></tr>';
     const data = await adminFetch('/users?per_page=200');
     users = data.users || [];
-   const { data: docs, error: docsError } = await sbService.from('a3_documents').select('user_id, status').neq('status', 'Excluído');
+   // linha 607 — substituir por:
+const { data: docs, error: docsError } = await sbService
+  .from('a3_documents')
+  .select('user_id, status')
+  .neq('status', 'Excluido')
+  .neq('status', 'Processado')
+  .neq('status', 'Demanda recebida');
     const countMap = {};
     if (!docsError) (docs || []).forEach(d => { countMap[d.user_id] = (countMap[d.user_id] || 0) + 1; });
     updateStats();
