@@ -1,12 +1,24 @@
 {
-  "routes": [
+  "redirects": [
     {
-      "src": "/experimentos/A3digital",
-      "dest": "/experimentos/A3digital/login.html"
+      "source": "/experimentos/A3digital",
+      "destination": "/experimentos/A3digital/login.html",
+      "permanent": false
     },
     {
-      "src": "/experimentos/a3digital",
-      "dest": "/experimentos/A3digital/login.html"
+      "source": "/experimentos/a3digital",
+      "destination": "/experimentos/A3digital/login.html",
+      "permanent": false
+    },
+    {
+      "source": "/experimentos",
+      "destination": "/experimentos/A3digital/login.html",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/experimentos/A3digital/login.html",
+      "permanent": false
     }
   ]
 }
